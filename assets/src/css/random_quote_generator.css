@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.quote-generator-page {
+
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(-45deg,
+            #667eea,
+            #764ba2,
+            #ff6b6b,
+            #4facfe);
+
+    background-size: 400% 400%;
+
+    animation: gradientAnimation 15s ease infinite;
+
+    overflow-x: hidden;
+}
+
+@keyframes gradientAnimation {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.quote-card {
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25);
+
+    animation: cardFade .8s ease;
+}
+
+@keyframes cardFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-mark {
+
+    font-size: 80px;
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+}
+
+.app-title {
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.app-subtitle {
+
+    opacity: .85;
+
+    margin-bottom: 30px;
+}
+
+.quote-text {
+
+    font-size: 1.5rem;
+
+    line-height: 1.8;
+
+    min-height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.author {
+
+    margin-top: 15px;
+
+    font-weight: 500;
+
+    opacity: .9;
+}
+
+.button-group {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn-generate {
+
+    background: linear-gradient(135deg,
+            #ff9966,
+            #ff5e62);
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-generate:hover {
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.btn-copy {
+
+    background: white;
+
+    color: #333;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-copy:hover {
+
+    transform: translateY(-3px);
+}
+
+@media(max-width:768px) {
+
+    .quote-card {
+        padding: 30px;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+        min-height: 180px;
+    }
+
+    .quote-mark {
+        font-size: 60px;
+    }
+}
